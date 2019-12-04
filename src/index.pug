@@ -1,0 +1,82 @@
+mixin hello(name, price, size, numf, numv, field, min)
+	.container
+		ul.price-tbl
+			li.tbl-block
+				h3 #{name}
+				.price
+					span #{price}
+					| &nbsp; Per Month
+				ul.features
+					li 
+						strong #{size}&nbsp;
+						| Sized Feels
+					li 
+						strong #{numf}&nbsp;
+						| Pet Friend(s)
+					li
+						strong #{numv}&nbsp;
+						| Monthly Visits
+					li
+						strong #{field}&nbsp;
+						| Field Trips
+					li
+						strong #{min}&nbsp;
+						| Minute Sessions
+					li 24/7 Trainer Support
+				div
+					a.btn.btn-primary(href='#') Subscribe
+// START 
+header#header
+	nav.navbar.fixed-top.navbar-light.bg-faded#nav-bar
+		a.navbar-brand(href='#')
+			img#header-img(src="#", alt="brand-logo")
+			span &nbsp; Furry Feels
+		ul.nav#real-nav
+			li.nav-item
+				a.anchor.nav-link.active(href='#about') About
+			li.nav-item
+				a.anchor.nav-link(href='#process') How it Works
+			li.nav-item
+				a.anchor.nav-link(href='#offer') Pricing
+
+main.text-center
+	section.jump
+		h1#lead.animated.focus Get Snuggled
+		h2#tagline Easing grief, stress, and loneliness through friendly pet visits. 
+		form#form(action="https://www.freecodecamp.com/email-submit")
+			input#email(type="email", name="email", placeholder="Enter your email address" required)
+			input#submit(type="submit" value="Get Started").btn
+	
+	section.jump#about
+		a(name="about")
+		h2.lead What is a Therapy Pet?
+		p.
+			Therapy pets go with their owners to volunteer in settings such as work, schools, hospitals, and nursing homes. From working with a child who is learning to read to visiting a senior in assisted living, therapy dogs and their owners work together as a team to improves the lives of other people. Therapy pets are not service animals. A therapy pet doesn't need to be perfect as far as obedience is concerned, but they do need a solid friendly temperament and an ability to shine in various situations. Any type of activity with the owner and pet strengthens the pet/human bond. That's priceless! In addition to strengthening that bond, the rewards of easing grief, stress, and loneliness through friendly pet visits are immeasurable. 
+	section.jump#process
+		a(name="process")
+		h2.lead How it Works
+		p. 
+			Once you choose and establish your bond with your furry friend(s) (some coaching/training assistance will be provided), you may visit your friend(s) at one of our facilities, arrange home visits and field trips at your convenincce or need level.
+			
+		iframe#video(src="https://www.youtube.com/embed/hhoQqN9oUpo" frameborder="0" allowfullscreen)
+	section.jump#offer
+		a(name="offer")
+		h2.lead Offerings
+		#pricing
+			+hello('Simple Snuggle', 8.99, 'Small', 1, 1, 1, 30)  
+			+hello('Standard Snuggle', 14.99, 'Medium', 2, 2, 2, 60)  
+			+hello('Super Snuggle', 19.99, 'Large', 3, 4, 3, 90)  
+			+hello('Death Grip', 30.99, 'All', 4, 8, 4, 120)
+			
+	p *Furry Feels does not discriminate against any specicies or breed. As long as they pass our assesment, they can work with us.*
+
+footer
+	ul.nav.justify-content-center
+		li.nav-item
+			a.nav-link.active(href='#') Privacy
+		li.nav-item
+			a.nav-link(href='#') Terms
+		li.nav-item
+			a.nav-link(href='#') Contact
+	p.text-center Copyright &copy;&nbsp;2017 Furry Feels Therapy (a Twin Paw company).
+
